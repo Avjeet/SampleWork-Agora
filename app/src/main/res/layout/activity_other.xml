@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_red"
+        android:layout_width="100dp"
+        android:layout_height="195px"
+        android:onClick="onClick"
+        app:srcCompat="@android:color/holo_red_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72px"
+            android:layout_marginLeft="72px"
+            android:layout_marginEnd="22px"
+            android:layout_marginRight="22px"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115px"
+                android:background="#12FFFFFF"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_rank"
+                    android:layout_width="129px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_player"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bombard"
+                    android:paddingStart="54px"
+                    android:textSize="15sp"
+                    android:paddingLeft="54px"
+                    android:text="MzϬ×cXcY彡p"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_kills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:gravity="center"
+                    android:paddingEnd="50px"
+                    android:paddingRight="50px"
+                    android:text="5 Kills"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115px"
+                android:background="#12FFFFFF"
+                android:layout_marginTop="4px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="129px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bombard"
+                    android:paddingStart="54px"
+                    android:textSize="15sp"
+                    android:paddingLeft="54px"
+                    android:text="mrnRWm6mI彡"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:gravity="center"
+                    android:paddingEnd="50px"
+                    android:paddingRight="50px"
+                    android:text="5 Kills"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115px"
+                android:background="#12FFFFFF"
+                android:layout_marginTop="4px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="129px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bombard"
+                    android:paddingStart="54px"
+                    android:textSize="15sp"
+                    android:paddingLeft="54px"
+                    android:text="lTbYcÆV1YR"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:gravity="center"
+                    android:paddingEnd="50px"
+                    android:paddingRight="50px"
+                    android:text="2 Kills"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115px"
+                android:background="#12FFFFFF"
+                android:layout_marginTop="4px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="129px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bombard"
+                    android:paddingStart="54px"
+                    android:textSize="15sp"
+                    android:paddingLeft="54px"
+                    android:text="ZsÆmDyUcU5"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:gravity="center"
+                    android:paddingEnd="50px"
+                    android:paddingRight="50px"
+                    android:text="0 Kills"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115px"
+                android:background="#12FFFFFF"
+                android:layout_marginTop="4px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="129px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bombard"
+                    android:paddingStart="54px"
+                    android:textSize="15sp"
+                    android:paddingLeft="54px"
+                    android:text="77彡wfϬI9"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:gravity="center"
+                    android:paddingEnd="50px"
+                    android:paddingRight="50px"
+                    android:text="1 Kills"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115px"
+                android:background="#12FFFFFF"
+                android:layout_marginTop="4px"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="129px"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/bombard"
+                    android:paddingStart="54px"
+                    android:textSize="15sp"
+                    android:paddingLeft="54px"
+                    android:text="VP0m4LgR"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/bombard"
+                    android:gravity="center"
+                    android:paddingEnd="50px"
+                    android:paddingRight="50px"
+                    android:text="0 Kills"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_results"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="0dp"
+        android:layout_height="139px" />
+
+
+    <!--    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_you_tube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.youtube.player.YouTubeThumbnailView
+            android:id="@+id/you_tube_thumb"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>-->
+
+    <!-- <io.apptik.widget.MultiSlider
+         android:id="@+id/range_slider5"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:thumbNumber="2"
+         app:scaleMin="10"
+         app:scaleMax="50"
+         app:scaleStep="5"
+         app:thumbValue1="10"
+         app:thumbValue2="50"
+         app:thumbColor="@color/colorPrimaryDark"
+         app:trackColor="@android:color/holo_blue_dark"
+         app:rangeColor="@android:color/holo_blue_dark"
+         app:stepsThumbsApart="5"
+         app:drawThumbsApart="true"/>
+ -->
+    <!-- <com.jaygoo.widget.RangeSeekBar
+         android:id="@+id/seekbar1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:rsb_markTextArray="@array/markArray"
+         app:rsb_lineColorSelected="@color/colorAccent"
+
+         app:rsb_lineColorEdge="@color/colorSeekBarDefault"
+         app:rsb_cellMode="number"
+         app:rsb_seekBarMode="range"
+         />-->
+</LinearLayout>

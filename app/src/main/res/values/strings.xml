@@ -1,0 +1,85 @@
+<resources>
+
+    <string name="api_key">AIzaSyB7mGIjJZe3JOkJJhmMbH6089lL9goFn7E</string>
+    <string name="private_app_id">8862728d019143418dd9944df0f3acf5</string>
+    <string name="channel_name">live_rooter_2</string>
+    <string name="channel_desc">desc</string>
+    <declare-styleable name="CrystalRangeSeekbar">
+        <attr name="corner_radius" format="float" />
+        <attr name="min_value" format="float" />
+        <attr name="max_value" format="float" />
+        <attr name="min_start_value" format="float" />
+        <attr name="max_start_value" format="float" />
+        <attr name="steps" format="float" />
+        <attr name="gap" format="float" />
+        <attr name="fix_gap" format="float" />
+        <attr name="bar_color" format="color" />
+        <attr name="bar_highlight_color" format="color" />
+        <attr name="left_thumb_color" format="color" />
+        <attr name="left_thumb_color_pressed" format="color" />
+        <attr name="left_thumb_image" format="reference" />
+        <attr name="left_thumb_image_pressed" format="reference" />
+        <attr name="right_thumb_color" format="color" />
+        <attr name="right_thumb_color_pressed" format="color" />
+        <attr name="right_thumb_image" format="reference" />
+        <attr name="right_thumb_image_pressed" format="reference" />
+        <attr name="position" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="data_type" format="enum">
+            <enum name="_long" value="0" />
+            <enum name="_double" value="1" />
+            <enum name="_integer" value="2" />
+            <enum name="_float" value="3" />
+            <enum name="_short" value="4" />
+            <enum name="_byte" value="5" />
+        </attr>
+    </declare-styleable>
+    <string name="app_name">Sample</string>
+    <string name="stop">Stop</string>
+    <string name="action_terminate">terminate_broadcast</string>
+    <string name="broadcast_ended">Broadcast Ended</string>
+    <string-array name="video_id_array">
+        <item>YU_Sti_RXqg</item>
+        <item>ZxTVQ8oEAVM</item>
+        <item>N2zS76hwg5Q</item>
+        <item>QT_0sMEAcTY</item>
+        <item>EhSEhSw729E-Uo</item>
+        <item>zDCmeX-nBRQ</item>
+        <item>nnp46b6D74Y</item>
+        <item>OsDkFnYf2Us</item>
+        <item>hGWp5XNXO6Y</item>
+        <item>C75e6UZxc8U</item>
+    </string-array>
+
+    <string-array name="video_title_array">
+        <item>IJ - 1</item>
+        <item>IJ - 2</item>
+        <item>IJ - 3</item>
+        <item>IJ - 4</item>
+        <item>IJ - 5</item>
+        <item>IJ - 6</item>
+        <item>IJ - 7</item>
+        <item>IJ - 8</item>
+        <item>IJ - 9</item>
+        <item>IJ - 10</item>
+    </string-array>
+
+    <string-array name="video_duration_array">
+        <item>02:48</item>
+        <item>00:44</item>
+        <item>01:01</item>
+        <item>00:55</item>
+        <item>01:03</item>
+        <item>00:25</item>
+        <item>00:34</item>
+        <item>00:45</item>
+        <item>00:52</item>
+        <item>00:28</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

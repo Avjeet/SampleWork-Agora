@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "1027838049870",
+    "firebase_url": "https://sportsx-1243.firebaseio.com",
+    "project_id": "sportsx-1243",
+    "storage_bucket": "sportsx-1243.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027838049870:android:9fd010b83ed2779d",
+        "android_client_info": {
+          "package_name": "com.threesixteen.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027838049870-ps2g9ggh1v4vkiqi6i1bbvhr8qiunk4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.threesixteen.app",
+            "certificate_hash": "97e2af286de9513b9c3c0d38b62c5acc77d03cae"
+          }
+        },
+        {
+          "client_id": "1027838049870-4sju0eb2p1ch35kp6p20k8i6fvfpd3k3.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1027838049870-s1b69fblas37516kbqivqsinv4e61hn9.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1027838049870-hhiam5ipv2abcsljmfis0hcg0hishkub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.threesixteen.app",
+            "certificate_hash": "b7f1de350dd092775cade25eef35d2cc9221fe60"
+          }
+        },
+        {
+          "client_id": "1027838049870-fn757qv5k3lq1rblf7f968l11iuc7qbo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.threesixteen.app",
+            "certificate_hash": "673b8ef638d8fa55c19162443ec0a6c4bdb29a2c"
+          }
+        },
+        {
+          "client_id": "1027838049870-5n9o5tv4lusiq0k2mr885tmqo2b1i556.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7mGIjJZe3JOkJJhmMbH6089lL9goFn7E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027838049870:android:ee7b19f9bb3676aa",
+        "android_client_info": {
+          "package_name": "com.rooter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027838049870-4sju0eb2p1ch35kp6p20k8i6fvfpd3k3.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1027838049870-s1b69fblas37516kbqivqsinv4e61hn9.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1027838049870-5n9o5tv4lusiq0k2mr885tmqo2b1i556.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7mGIjJZe3JOkJJhmMbH6089lL9goFn7E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

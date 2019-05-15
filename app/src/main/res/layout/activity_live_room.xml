@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".ui.LiveRoomActivity">
+
+
+    <FrameLayout
+        android:id="@+id/layout_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6F000000" />
+
+    <ViewStub
+        android:id="@+id/stub_pre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_pre_join" />
+
+    <ViewStub
+        android:id="@+id/stub_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_post_join" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:text="@string/broadcast_ended"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="30sp" />
+
+</FrameLayout>
