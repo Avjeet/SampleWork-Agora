@@ -5,23 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/layout_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <View
         android:id="@+id/shadow_mask"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0.8"
         android:background="@android:color/black"
-        android:alpha="0.8"/>
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/cancel"
         android:layout_width="@dimen/broadcast_image_size"
         android:layout_height="@dimen/broadcast_image_size"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/switch_camera"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,65 +37,53 @@
         app:srcCompat="@android:drawable/ic_delete" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/switch_camera"
         android:layout_width="@dimen/broadcast_image_size"
         android:layout_height="@dimen/broadcast_image_size"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/cancel"
+        app:layout_constraintTop_toTopOf="@+id/cancel"
         app:srcCompat="@drawable/ic_camera_switch" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/settings"
         android:layout_width="@dimen/broadcast_image_size"
         android:layout_height="@dimen/broadcast_image_size"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_camera"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/switch_camera"
+        app:layout_constraintTop_toTopOf="@+id/switch_camera"
         app:srcCompat="@drawable/ic_settings" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat"
+    <ViewStub
+        android:id="@+id/viewStub_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_continue"
+        android:layout_marginTop="8dp"
+        android:inflatedId="@+id/viewStub_select"
+        android:layout="@layout/select_match_temp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.25">
+        app:layout_constraintTop_toBottomOf="@+id/switch_camera" />
 
+    <ViewStub
+        android:id="@+id/viewStub_edit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout="@layout/edit_title"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/shadow_mask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_camera" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:textColor="@color/white"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:text="Select your match" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:gravity="center_horizontal"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="normal"
-            android:text="Pick a match you would like to broadcast." />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <ImageView
         android:id="@+id/imageView4"
@@ -135,19 +129,6 @@
         app:layout_constraintTop_toTopOf="@+id/btn_continue"
         android:src="@drawable/ic_audio" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/select_match_rv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_continue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"
-        app:layout_constraintVertical_bias="0.060000002" />
 
     <TextView
         android:id="@+id/textView4"
@@ -156,16 +137,17 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:textSize="12sp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="sans-serif-medium"
-        android:textStyle="normal"
+        android:text="Live Broadcast"
         android:textColor="@color/white"
-        tools:text="Live Broadcast"
+        android:textSize="12sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/btn_continue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_match_rv" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

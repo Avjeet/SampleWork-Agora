@@ -5,12 +5,16 @@ import android.graphics.Rect;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sample.Agora.UI.LiveBroadcastActivity;
 import com.sample.R;
+
+import java.util.ArrayList;
 
 /**
  * Created by Your name on 15-05-2019.
@@ -19,42 +23,55 @@ public class SelectMatchAdapter extends RecyclerView.Adapter<SelectMatchAdapter.
 
     private static final int ROW1 = 0;
     private static final int ROW2 = 1;
+
+
+    private static Integer lastCheckedPos;
+
+    private ArrayList<Boolean> list = new ArrayList<>();
+
     private Activity activity;
-    private boolean first = true;
+    private LiveBroadcastActivity liveBroadcastActivity;
 
     public SelectMatchAdapter(Activity activity) {
         this.activity = activity;
+        liveBroadcastActivity = (LiveBroadcastActivity) activity;
+
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(activity).inflate(R.layout.match_item, parent, false);
-
-//        if (viewType == ROW2) {
-//            LinearLayout.LayoutParams buttonLayoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            if (first) {
-//                first = false;
-//                buttonLayoutParams.setMargins(100, 40, 10, 10);
-//            }else{
-//                buttonLayoutParams.setMargins(10, 40, 10, 10);
-//            }
-//
-//            view.setLayoutParams(buttonLayoutParams);
-//        }
-
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        if (lastCheckedPos != null && lastCheckedPos == position) {
+            holder.checkTick.setVisibility(View.VISIBLE);
+        } else {
+            holder.checkTick.setVisibility(View.INVISIBLE);
+        }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((LiveBroadcastActivity) activity).setUpEditTitleUi();
+                int toChange = 0;
+                if (lastCheckedPos != null) {
+                    toChange = lastCheckedPos;
+                }
+                lastCheckedPos = holder.getAdapterPosition();
+                notifyItemChanged(toChange);
+
+                holder.checkTick.setVisibility(View.VISIBLE);
+
+                liveBroadcastActivity.showEditTitleUi();
             }
         });
     }
+
+//    private void checkItem(int pos, ImageView view) {
+//        lastChecked = null;
+//    }
 
     @Override
     public int getItemViewType(int position) {
@@ -71,8 +88,13 @@ public class SelectMatchAdapter extends RecyclerView.Adapter<SelectMatchAdapter.
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
+        ImageView checkTick;
+        TextView liveTag;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            this.checkTick = itemView.findViewById(R.id.check_tick);
+            this.liveTag = itemView.findViewById(R.id.live_tag);
         }
     }
 

@@ -154,6 +154,10 @@ public class AgoraRtcEngine {
             return surfaceView;
     }
 
+    public void switchCamera(){
+        mRtcEngine.switchCamera();
+    }
+
     public void stopPreview() {
         mRtcEngine.stopPreview();
     }

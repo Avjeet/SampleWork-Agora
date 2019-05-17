@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:layout_marginLeft="6dp"
-            android:background="@drawable/rounded_bg"
+
             android:orientation="vertical"
             android:paddingStart="12dp"
             android:paddingLeft="12dp"
@@ -80,7 +80,7 @@
                 android:layout_width="54dp"
                 android:layout_height="match_parent"
                 android:scaleType="center"
-                android:src="@drawable/btn_switch_camera" />
+                android:src="@drawable/ic_camera_switch" />
 
 
         </com.sample.customUI.AGLinearLayout>

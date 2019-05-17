@@ -20,7 +20,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Agora.UI.LiveBroadcastActivity"
-            android:windowSoftInputMode="adjustResize"
             android:screenOrientation="portrait">
 
         </activity>

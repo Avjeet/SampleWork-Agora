@@ -27,7 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_delete" />
+        app:srcCompat="@drawable/ic_arrow_back"
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -38,79 +39,192 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@android:drawable/presence_video_busy" />
+        app:srcCompat="@drawable/ic_camera_switch"
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="@dimen/broadcast_image_size"
         android:layout_height="@dimen/broadcast_image_size"
         android:layout_marginEnd="16dp"
-        android:tint="#E91E63"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:srcCompat="@drawable/ic_settings_white_24dp" />
+        app:srcCompat="@drawable/ic_settings"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        tools:text="Live Broadcast"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_live"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_match_rv" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_live"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.25">
+        app:layout_constraintVertical_bias="0.0">
 
 
-       <androidx.appcompat.widget.AppCompatImageView
-           android:layout_width="74dp"
-           android:layout_height="74dp"
-           app:srcCompat="@drawable/btn_beautification"
-           />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            app:srcCompat="@drawable/btn_beautification" />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter the title"
-            android:textColorHint="@color/white"
-            android:textSize="22sp"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/agora_blue"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_edit_text"
+            android:backgroundTint="@color/white"
+            android:gravity="center_horizontal"
+            android:hint="Create a title"
             android:maxWidth="245dp"
-            android:minWidth="245dp"/>
-        
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="22sp" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/shadow_mask"
+        app:layout_constraintStart_toStartOf="@+id/shadow_mask"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Select your language"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/radio_btn_state"
+                android:button="@drawable/radio_btn_state"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:minHeight="30dp"
+                android:text="English"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/radio_btn_state"
+                android:button="@drawable/radio_btn_state"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:minHeight="30dp"
+                android:text="Hindi"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_btn_state"
+                android:button="@drawable/radio_btn_state"
+                android:gravity="center"
+                android:minWidth="80dp"
+                android:minHeight="30dp"
+                android:text="Telugu"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/white" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp">
+
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="@dimen/broadcast_image_size"
         android:layout_height="@dimen/broadcast_image_size"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_start_live"
+        app:layout_constraintEnd_toStartOf="@+id/btn_start_live"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button"
-        app:srcCompat="@android:drawable/presence_audio_busy" />
+        app:layout_constraintTop_toTopOf="@+id/btn_start_live"
+        android:src="@drawable/ic_video"
+        />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/btn_start_live"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
-        android:text="Button"
+        android:text="Start Live Video"
+        style="@style/Button_Rounded"
+        android:background="@drawable/button_state"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.5"
@@ -123,12 +237,13 @@
         android:layout_width="@dimen/broadcast_image_size"
         android:layout_height="@dimen/broadcast_image_size"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_start_live"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button"
-        app:srcCompat="@android:drawable/presence_video_busy" />
+        app:layout_constraintStart_toEndOf="@+id/btn_start_live"
+        app:layout_constraintTop_toTopOf="@+id/btn_start_live"
+        android:src="@drawable/ic_audio"
+       />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
